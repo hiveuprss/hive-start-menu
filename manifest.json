@@ -1,0 +1,21 @@
+{
+
+  "description": "",
+  "manifest_version": 2,
+  "name": "SSM",
+  "version": "0.1",
+ 
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_title": "SSM",
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
