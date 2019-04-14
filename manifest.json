@@ -1,13 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "STEEM Start Menu",
+  "name": "STEEM Menu",
   "version": "0.1",
-  "description": "A menu of shortcuts for STEEM blockchain apps.",
-
-
-  "permissions": [
-    "activeTab"
-  ],
+  "description": "STEEM is much bigger than Steemit! STEEM menu is a collection of shortcuts to useful STEEM blockchain apps.",
 
   "browser_action": {
     "default_title": "Start",
