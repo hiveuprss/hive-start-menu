@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "STEEM Menu",
+  "name": "Steem Menu",
   "version": "0.0.0.1",
-  "description": "STEEM is much bigger than Steemit! STEEM menu is a collection of shortcuts to useful STEEM blockchain apps.",
+  "description": "Steem is much bigger than Steemit! Steem menu is a collection of shortcuts to useful Steem blockchain apps.",
 
   "browser_action": {
     "default_title": "Start",
