@@ -1,5 +1,4 @@
 function createNewTab(url) {
-	console.log(url)
 	chrome.tabs.create({
 		url: url
 	})
