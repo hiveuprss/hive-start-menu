@@ -1,234 +1,62 @@
-<html style="width: 400px;">
+<html style="width: 580;">
 <head>
-	<link rel="stylesheet" href="bootstrap.min.css">
-	<script src="jquery-3.4.0.min.js"></script>
-	<script src="bootstrap.min.js"></script>
+ <link rel="stylesheet" href="thirdparty/bootstrap.min.css">
+ <script src="thirdparty/jquery-3.4.0.min.js"></script>
+  <script src="thirdparty/thirdparty/popper.min.js"></script>
+ <script src="thirdparty/bootstrap.min.js"></script>
+  <link href="thirdparty/fontawesome/css/all.min.css" rel="stylesheet">
+  <script defer src="thirdparty/fontawesome/js/all.js"></script>
+  <script src="thirdparty/handlebars.min.js"></script>
 </head>
 <body>
-<div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div id="submenus"></div>
+      </div>
+      <div class="col-sm-6">
+        <div id="menu"></div>
+      </div>
+    </div>
+  </div>
 
-<div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Starters <span class="badge badge-primary">3</span>
-        </button>
-      </h5>
-    </div>
+  <!-- HANDLEBARS TEMPLATE -->
+  <script id="menu-template" type="text/x-handlebars-template">
+    <ul class="list-group">
+      {{#categories}}
+        <li class="list-group-item" id="cat-{{name}}">
+            <i class="fas fa-chevron-left"></i>       {{name}}
+          </a>
+        </li>
+      {{/categories}}
+    </ul>
+  </script>
+  <!-- END HANDLEBARS TEMPLATE -->
 
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-      	<ul class="list-group">
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://steemit.com">Steemit</button>
-    			<span class="badge badge-light">Your voice is worth something</span>
-    		</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://steemitwallet.com">SteemitWallet</button>
-				<span class="badge badge-light">Steemit's official Steem blockchain wallet</span>
-			</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://steem.com">Steem</button>
-				<span class="badge badge-light">Powering Communities and Opportunities</span>
-			</li>
-		</ul>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Alternative Interfaces <span class="badge badge-primary">8</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-      	<ul class="list-group">
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://busy.org">Busy</button>
-				<span class="badge badge-light">An alternative to Steemit</span>
-			</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://steempeak.com">SteemPeak</button>
-				<span class="badge badge-light">The intuitive way to experience everything STEEM</span>
-			</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://partiko.app">Partiko</button>
-				<span class="badge badge-light">The easiest way to earn crypto</span>
-			</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://actifit.io/">Actifit</button>
-				<span class="badge badge-light">Rewards your fitness activities</span>
-			</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://steemhunt.com/">Steemhunt</button>
-				<span class="badge badge-light">Discover cool products, get rewards</span>
-			</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://dlike.io/">DLike</button>
-				<span class="badge badge-light">Share, get liked, and earn rewards</span>
-			</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://fundition.io/">Fundition</button>
-				<span class="badge badge-light">Decentralized Crowdfunding</span>
-			</li>
-			<li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://utopian.io/">Utopian</button>
-				<span class="badge badge-light">Rewards open source project contributions</span>
-			</li>
-		</ul>	
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Fun & Games <span class="badge badge-primary">4</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-      	<ul class="list-group">
-   		  <li class="list-group-item">
-   		  	<button class="btn btn-dark dapplink" type="button" value="https://nextcolony.io/">NextColony</button>
-   		  	<span class="badge badge-light">Explore. Colonize. Battle. Collect.</span>
-   		  </li>
-   		  <li class="list-group-item">
-   		  	<button class="btn btn-dark dapplink" type="button" value="https://magic-dice.com">Magic Dice</button>
-   		  	<span class="badge badge-light">A game of change. Roll dice, win/lose crypto</span>
-   		  </li>
-   		  <li class="list-group-item">
-  			<button class="btn btn-dark dapplink" type="button" value="https://steemmonsters.com/">SteemMonsters</button>
-  			<span class="badge badge-light">Collect, Trade, Battle!</span>
-   		  </li>
-   		  <li class="list-group-item">
-  			<button class="btn btn-dark dapplink" type="button" value="https://steemnova.intinte.org">SteemNova</button>
-  			<span class="badge badge-light">OGame-based space strategy game</span>
-  		</li>
-   		  </li>
-   		 </ul>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingFour">
-      <h5 class="mb-0">
-        <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Tools & Utilities <span class="badge badge-primary">7</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-      <div class="card-body">
-      	<ul class="list-group">
-   		  <li class="list-group-item">
-   			<button class="btn btn-dark dapplink" type="button" value="https://steemworld.org">SteemWorld</button>
-   			<span class="badge badge-light">Statistics and useful tools For Steem accounts</span>
-		  </li>
- 		  <li class="list-group-item">
-   		  	<button class="btn btn-dark dapplink" type="button" value="https://steemit.accusta.tk/">Accusta</button>
-			<span class="badge badge-light">Account Statistics Service For Steem Blockchain</span>
-   		  </li>
- 		  <li class="list-group-item">
-   		  	<button class="btn btn-dark dapplink" type="button" value="https://steemd.com/">Steemd</button>
-   		  	<span class="badge badge-light">Blockchain Explorer for Steem</span>
-   		  </li>
-		  <li class="list-group-item">
-  	        <button class="btn btn-dark dapplink" type="button" value="https://steemauto.com">SteemAuto</button>
-  	        <span class="badge badge-light">Curation Trail, Fanbase, Scheduled Posts, ...</span>
-		  </li>
- 		  <li class="list-group-item">
-			<button class="btn btn-dark dapplink" type="button" value="https://steembottracker.com">Steem Bot Tracker</button>
-			<span class="badge badge-light">The #1 place for information on voting bots</span>
-   		  </li>
- 		  <li class="list-group-item">
-  			<button class="btn btn-dark dapplink" type="button" value="https://steembottracker.com/delegation.html">Steem Power Delegation Manager</button>
-  			<span class="badge badge-light">An easy way to manage SP delegations</span>
-   		  </li>
-   		  <li class="list-group-item">
-   		  	<button class="btn btn-dark dapplink" type="button" value="https://dpoll.xyz">DPoll</button>
-			<span class="badge badge-light">Decentralized polling app</span>
-		  </li>
-		  <li class="list-group-item">
-				<button class="btn btn-dark dapplink" type="button" value="https://www.dclick.io">DClick</button>
-				<span class="badge badge-light">An Incentivized Ad Platform by Proof of Click</span>
-			</li>
-   		</ul>
+  <!-- HANDLEBARS TEMPLATE -->
+  <script id="submenu-template" type="text/x-handlebars-template">
+    {{#categories}}
+      <div id="submenu-{{name}}" class="submenu" style="display: none">  
+
+        <ul class="list-group">
+          {{#this.apps}}
+            <li class="list-group-item">
+              <a href="{{url}}">{{name}}</a> <i class="far fa-star" style="float:right"></i><br>
+            </li>
+          {{/this.apps}}
+        </ul>
 
       </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingFive">
-      <h5 class="mb-0">
-        <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          Education <span class="badge badge-primary">2</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-      <div class="card-body">
-      	<ul class="list-group">
-   		  <li class="list-group-item">
-   	    	<button class="btn btn-dark dapplink" type="button" value="https://steemsavvy.com/">SteemSavvy</button>
-	        <span class="badge badge-light">The Ultimate Beginners Guide To The World of Steem</span>
-    	  </li>
- 		  <li class="list-group-item">
-	        <button class="btn btn-dark dapplink" type="button" value="https://www.steem.center">Steem Center</button>
-	        <span class="badge badge-light">Steem's Wiki and the "center of all things steem."</span>
-   		  </li>
-   		</ul>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingSix">
-      <h5 class="mb-0">
-        <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-          Multimedia <span class="badge badge-primary">3</span>
-        </button>
-      </h5>
-    </div>
-    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-      <div class="card-body">
-      	<ul class="list-group">
-   		  <li class="list-group-item">
-   	    	<button class="btn btn-dark dapplink" type="button" value="https://d.tube/">DTube</button>
-	        <span class="badge badge-light">Crypto-decentralized video platform</span>
-    	  </li>
- 		  <li class="list-group-item">
-	        <button class="btn btn-dark dapplink" type="button" value="https://www.vimm.tv">Vimm.TV</button>
-	        <span class="badge badge-light">Video streaming - Stream your way</span>
-   		  </li>
-   		  <li class="list-group-item">
-	        <button class="btn btn-dark dapplink" type="button" value="https://steepshot.io/">SteepShot</button>
-	        <span class="badge badge-light">Blockchain-powered Photo Sharing</span>
-   		  </li>
-   		  <li class="list-group-item">
-	        <button class="btn btn-dark dapplink" type="button" value="https://dsound.audio">dSound</button>
-	        <span class="badge badge-light">Decentralized Sound Platform</span>
-   		  </li>
-   		</ul>
-      </div>
-    </div>
-  </div>
-</div>
+    {{/categories}}
+  </script>
+  <!-- END HANDLEBARS TEMPLATE -->
 
-</div>
-<div class="card">
-	<span class="badge badge-link">Find even more Steem apps at <a href="https://steemprojects.com/">SteemProjects</a></span>
-</div>
-<br><br><br>
-<nav class="navbar fixed-bottom navbar-light bg-light">
-  
-  <span class="badge badge-light">Steem Menu brought to you by <a href="https://steemit.com/@torrey.blog">@torrey.blog</a></span>
+  <br><br><br>
+  <nav class="navbar fixed-bottom navbar-light bg-light">
+    <span class="badge badge-light">Brought to you by <a href="https://peakd.com/@hivetrending">@HiveTrending</a></span>
+  </nav>
 
-</nav>
-<script src="popup.js"></script>
+  <!-- RENDER TEMPLATE AFTER EVERYTHING ELSE LOADED -->
+  <script src="popup.js"></script>
 </body>
 </html>
