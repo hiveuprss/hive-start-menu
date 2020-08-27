@@ -2,14 +2,13 @@
 <head>
  <link rel="stylesheet" href="thirdparty/bootstrap.min.css">
  <script src="thirdparty/jquery-3.4.0.min.js"></script>
-  <script src="thirdparty/thirdparty/popper.min.js"></script>
+  <script src="thirdparty/popper.min.js"></script>
  <script src="thirdparty/bootstrap.min.js"></script>
   <link href="thirdparty/fontawesome/css/all.min.css" rel="stylesheet">
   <script defer src="thirdparty/fontawesome/js/all.js"></script>
   <script src="thirdparty/handlebars.min.js"></script>
 </head>
 <body>
-  <div class="container">
     <div class="row">
       <div class="col-sm-6">
         <div id="submenus"></div>
@@ -18,8 +17,7 @@
         <div id="menu"></div>
       </div>
     </div>
-  </div>
-
+  
   <!-- HANDLEBARS TEMPLATE -->
   <script id="menu-template" type="text/x-handlebars-template">
     <ul class="list-group">
@@ -41,7 +39,11 @@
         <ul class="list-group">
           {{#this.apps}}
             <li class="list-group-item">
-              <a href="{{url}}">{{name}}</a> <i class="far fa-star" style="float:right"></i><br>
+              <a href="{{url}}" id="{{id}}">{{name}}</a> 
+              <a class="nonfavorite" id="{{id}}">
+                <i class="far fa-star" style="float:right" id="{{id}}"></i>
+              </a>
+              <br>
             </li>
           {{/this.apps}}
         </ul>
