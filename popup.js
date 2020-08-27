@@ -92,15 +92,15 @@ function drawMenu() {
 
   Array.from(document.querySelectorAll('a.nonfavorite')).forEach(star => {
     star.onclick = (e) => {
-      addFavorite(e.target.id)
-      e.target.className = favorite
+      addFavorite(e.currentTarget.id)
+      e.currentTarget.className = favorite
     }
   })
 
   Array.from(document.querySelectorAll('a.favorite')).forEach(star => {
     star.onclick = (e) => {
-      removeFavorite(e.target.id)
-      e.target.className = 'nonfavorite'
+      removeFavorite(e.currentTarget.id)
+      e.currentTarget.className = 'nonfavorite'
     }
   })
 }
@@ -115,14 +115,11 @@ function getFavorites() {
   return []
 }
 
+
 function removeFavorite(id) {
   var favorites = JSON.parse(window.localStorage.getItem('favorites'))
-  console.log(favorites)
   
-  const index = favorites.indexOf(id);
-  if (index > -1) {
-    favorites.splice(index, 1);
-  }
+  favorites = favorites.filter((x) => x != id)
 
   window.localStorage.setItem('favorites', JSON.stringify(favorites))
 
