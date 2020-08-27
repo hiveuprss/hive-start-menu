@@ -173,6 +173,15 @@ function updateRecents(id) {
 }
 
 
+function eraseAllData() {
+  window.localStorage.removeItem('recents')
+  window.localStorage.removeItem('favorites')
+
+  // update visible menu
+  drawMenu()
+}
+
+
 function handleClickButton(e) {
   if (typeof e.target.value !== 'undefined' && e.target.value != "") {
    chrome.runtime.sendMessage({
@@ -201,6 +210,7 @@ anchors.forEach(function(button) {
 })
 
 
+document.querySelector('button#reset').onclick = eraseAllData
 
 
 
