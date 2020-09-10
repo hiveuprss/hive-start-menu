@@ -12,6 +12,7 @@ HIVE_APPS = {
   dcity:         {id: 'dcity', name: 'dCity', icon: '', url: '', description: ''},
   exode:         {id: 'exode', name: 'EXODE', icon: '', url: '', description: ''},
   holybread:     {id: 'holybread', name: 'Holybread', icon: '', url: 'https://www.holybread.io/', description: ''},
+  risingstar:    {id: 'risingstar', name: 'RisingStar', icon: '', url: 'https://www.risingstargame.com/', description: ''}
   splinterlands: {id: 'splinterlands', name: 'Splinterlands', icon: '', url: '', description: ''},
   
 // shopping
@@ -29,6 +30,10 @@ HIVE_APPS = {
   hivesearcher:  {id: 'hivesearcher', name: 'Hivesearcher', icon: '', url: 'https://hivesearcher.com/', description: 'Search engine for Hive content'},
   hivestats:     {id: 'hivestats', name: 'HiveStats', icon: '', url: 'https://hivestats.io', description: ''},
   hivetasks:     {id: 'hivetasks', name: 'HiveTasks', icon: '', url: 'https://hivetasks.com/', description: ''},
+
+// documentation
+// developers.hive.io
+// https://www.hive.wiki/index.php?title=Main_Page
 
 // null
   null:          {id: '', name: '', icon: '', url: '', description: ''},
@@ -48,7 +53,7 @@ function drawMenu() {
     {name: 'Recents',   apps: getRecents()},
     {name: 'Art',       apps: [HIVE_APPS['lensy'], HIVE_APPS['nftshowroom']]},
     {name: 'Blogging',  apps: [HIVE_APPS['peakd'], HIVE_APPS['hive.blog'], HIVE_APPS['leofinance'], HIVE_APPS['ecency']]},
-    {name: 'Gaming',    apps: [HIVE_APPS['brosino'], HIVE_APPS['dcity'], HIVE_APPS['exode'], HIVE_APPS['holybread'], HIVE_APPS['splinterlands']]},
+    {name: 'Gaming',    apps: [HIVE_APPS['brosino'], HIVE_APPS['dcity'], HIVE_APPS['exode'], HIVE_APPS['holybread'], HIVE_APPS['risingstar'], HIVE_APPS['splinterlands']]},
     {name: 'Shopping',  apps: [HIVE_APPS['hivelist'], HIVE_APPS['hiveswag'], HIVE_APPS['myhiveswag']]},
     {name: 'Utilities', apps: [HIVE_APPS['hiveblocks'], HIVE_APPS['hivestats'], HIVE_APPS['hive-engine'], HIVE_APPS['hivesearcher'], HIVE_APPS['hivetasks']]},
   ]};
