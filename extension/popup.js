@@ -12,7 +12,7 @@ HIVE_APPS = {
   dcity:         {id: 'dcity', name: 'dCity', icon: '', url: '', description: ''},
   exode:         {id: 'exode', name: 'EXODE', icon: '', url: '', description: ''},
   holybread:     {id: 'holybread', name: 'Holybread', icon: '', url: 'https://www.holybread.io/', description: ''},
-  risingstar:    {id: 'risingstar', name: 'RisingStar', icon: '', url: 'https://www.risingstargame.com/', description: ''}
+  risingstar:    {id: 'risingstar', name: 'RisingStar', icon: '', url: 'https://www.risingstargame.com/', description: ''},
   splinterlands: {id: 'splinterlands', name: 'Splinterlands', icon: '', url: '', description: ''},
   
 // shopping

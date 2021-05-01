@@ -7,6 +7,7 @@
   <link href="thirdparty/fontawesome/css/all.min.css" rel="stylesheet">
   <script defer src="thirdparty/fontawesome/js/all.js"></script>
   <script src="thirdparty/handlebars.min.js"></script>
+  <link href="popup.css" rel="stylesheet">
 </head>
 <body>
     <div class="row">
@@ -23,7 +24,7 @@
     <ul class="list-group">
       {{#categories}}
         <li class="list-group-item" id="cat-{{name}}">
-            <i class="fas fa-chevron-left"></i>       {{name}}
+            <i class="fas fa-chevron-left"></i> {{name}}
           </a>
         </li>
       {{/categories}}
@@ -34,14 +35,14 @@
   <!-- HANDLEBARS TEMPLATE -->
   <script id="submenu-template" type="text/x-handlebars-template">
     {{#categories}}
-      <div id="submenu-{{name}}" class="submenu" style="display: none">  
+      <div id="submenu-{{name}}" class="submenu">  
 
         <ul class="list-group">
           {{#this.apps}}
             <li class="list-group-item">
               <a href="{{url}}" id="{{id}}">{{name}}</a> 
               <a class="nonfavorite" id="{{id}}">
-                <i class="far fa-star" style="float:right" id="{{id}}"></i>
+                <i class="far fa-star" id="{{id}}"></i>
               </a>
               <br>
             </li>

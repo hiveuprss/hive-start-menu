@@ -1,0 +1,28 @@
+body {
+	background-image: url('assets/hiveiobckg.png');
+	background-repeat: no-repeat;
+	background-size: 580px;
+}
+
+.nonfavorite {
+	float: right;
+}
+
+.favorite {
+	float: right;
+}
+
+.submenu {
+	display: none;
+}
+
+.list-group-item {
+	background-color: rgba(255,255,255,0.5);
+	border-top: 1px solid #ddd;
+	border-radius: 0;
+	color: #fff;
+}
+
+.list-group-item:hover {
+	background-color: rgba(255,255,255,0.5);
+}

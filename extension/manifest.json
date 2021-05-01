@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Hive Start Menu",
   "version": "0.0.0.1",
-  "description": "Hive is much bigger than Hive.blog! Hive start menu is a collection of shortcuts to the best Hive blockchain apps.",
+  "description": "Hive is much bigger than Hive.blog! Hive start menu is a collection of shortcuts to the best Hive blockchain apps and tools.",
 
   "icons": { "128": "assets/hive-menu-icon-3-128.png" },
 
